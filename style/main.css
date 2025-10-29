@@ -1,0 +1,91 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --Blue-200: hsl(193, 38%, 86%);
+    --Green-300: hsl(150, 100%, 66%);
+    --Blue-600: hsl(217, 19%, 38%);
+    --Blue-900: hsl(217, 19%, 24%);
+    --Blue-950: hsl(218, 23%, 16%);
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    font-family: "Manrope", sans-serif;
+    background-color: var(--Blue-950);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+main {
+    background-color: var(--Blue-900);
+    width: 100%;
+    min-height: 300px;
+    border-radius: 0.5rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+
+    padding: 3rem 1rem;
+}
+
+h1 {
+    font-size: 0.8rem;
+    color: var(--Green-300);
+    font-weight: 800;
+    letter-spacing: 0.3rem;
+    width: 100%;
+    text-align: center;
+
+    position: absolute;
+    top: 2rem;
+}
+
+.break-line {
+    position: absolute;
+    bottom: 3rem;
+
+}
+
+.advice {
+    font-size: 1.25rem;
+    font-weight: 800;
+    line-height: 1.4;
+    color: var(--Blue-200);
+    text-align: center;
+}
+
+.let-random {
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    background-color: var(--Green-300);
+
+    position: absolute;
+    bottom: -1.5rem;
+    border: none;
+    cursor: pointer;
+    transition: box-shadow 0.2s ease;
+}
+
+.let-random:hover {
+    box-shadow: 0 8px 20px var(--Green-300);
+}
+
+@media screen and (min-width: 600px) {
+    main {
+        width: 30%;
+        min-height: 300px;
+    }
+}

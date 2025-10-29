@@ -5,24 +5,53 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Figtree:ital,wght@0,300..900;1,300..900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style/main.css">
   <title>Frontend Mentor | Advice generator app</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
+    .attribution { font-size: 11px; text-align: center; margin-top: 3rem;}
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
 </head>
 <body>
+  <main>
+    <h1>ADVICE <span id="advice-id"></span></h1>
+    <p class="advice"></p>
+    <picture class="break-line">
+    <!-- Ảnh cho màn hình nhỏ hơn hoặc bằng 600px -->
+      <source
+        media="(max-width: 600px)"
+        srcset="./images/pattern-divider-mobile.svg"
+      >
 
-  Advice #<!-- Advice ID goes here -->
+      <!-- Ảnh cho màn hình lớn hơn 600px -->
+      <source
+        media="(min-width: 601px)"
+        srcset="./images/pattern-divider-desktop.svg"
+      >
 
-  "<!-- Advice text goes here -->"
+      <!-- Ảnh mặc định (phòng trường hợp trình duyệt cũ không hiểu <source>) -->
+      <img
+        src="./images/pattern-divider-desktop.svg"
+        alt="Responsive banner"
+        loading="lazy"
+      >
+    </picture>
+
+    <button class="let-random">
+      <img src="./images/icon-dice.svg" alt="dice">
+    </button>
+  </main>
+  
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
   </div>
+  <script src="./script/main.js"></script>
 </body>
 </html>
